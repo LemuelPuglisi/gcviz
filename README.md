@@ -70,7 +70,7 @@ Papers:
 * [Asynchronous Fluid Communities algorithm](https://arxiv.org/pdf/1703.09307.pdf)
 * [Kernighan-Lin bisection](https://ieeexplore.ieee.org/document/6771089)
 * [Node2Vec](https://snap.stanford.edu/node2vec/)
-* [Louvain](https://arxiv.org/abs/Link 0803.0476)
+* [Louvain](https://arxiv.org/abs/0803.0476)
 
 
 
