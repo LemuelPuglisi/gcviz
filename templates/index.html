@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='lib/materialize_1.0.0/materialize.min.css') }}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <title>gcviz - Genes communities exploration</title>
+    <base href="/">
+</head>
+
+<body>
+
+    <!-- Floating button HTML -->
+    <div class="fixed-action-btn" id="action-button">
+        <a class="btn-floating btn-large btn-floating-color" id="menu-button">
+            <i class="large material-icons">menu</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating btn-floating-color sidenav-trigger" href="#" data-target="settings-sidenav">
+                    <i class="material-icons">settings</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating btn-floating-color sidenav-trigger" href="#" data-target="algorithm-sidenav">
+                    <i class="material-icons">functions</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Feature Discovery -->
+    <div id="menu-discovery" class="tap-target tap-target-color" data-target="menu-button">
+        <div class="tap-target-content">
+            <h5>Interact with genes</h5>
+            <p>
+                Join, explore, analyze the gene graph communities. 
+                This floating button will provide you a convenient feature menu.
+            </p>
+        </div>
+    </div>
+
+    <!-- Algorithm handling sidenav -->
+    <ul id="algorithm-sidenav" class="sidenav sidenav-color">
+
+        <div class="sidenav-brand-container">
+            <div class="brand-item">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/gcviz-brand.png') }}">
+            </div>
+        </div>
+
+        <div class="sidenav-container">
+            <div class="input-field">
+                <select id="algorithm-select">
+                    <option value="" disabled selected>Choose your algorithm</option>
+                </select>
+                <label>Community detection algorithm</label>
+            </div>
+        </div>
+
+        <div class="sidenav-container">
+            <p>Communities detected.</p>
+            <div class="community-legend">
+                <span>small</span>
+                <span>massive</span>
+            </div>
+            <div id="communities-container"></div>
+        </div>
+    </ul>
+
+    <!-- Gene informations sidenav -->
+    <ul id="gene-info-sidenav" class="sidenav sidenav-color">
+
+        <div class="sidenav-brand-container">
+            <div class="brand-item">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/gcviz-brand.png') }}">
+            </div>
+        </div>
+
+        <div class="sidenav-container">
+            <h5>Gene informations</h5>
+            <table class="highlight">
+                <tbody id="gene-info-table"></tbody>
+            </table>
+        </div>
+
+    </ul>
+
+    <!-- Gene informations sidenav -->
+    <ul id="settings-sidenav" class="sidenav sidenav-color">
+
+        <div class="sidenav-brand-container">
+            <div class="brand-item">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/gcviz-brand.png') }}">
+            </div>
+        </div>
+
+        <div class="sidenav-container">
+            <div class="input-field">
+                <select id="layout-select"></select>
+                <label>Graph layout</label>
+            </div>
+        </div>
+    </ul>
+
+    <div id="graph-display"></div>
+    <div id="legend" class="z-depth-5"></div>
+
+    <!-- {{ url_for('static', filename='lib/materialize_1.0.0/materialize.min.js') }} -->
+    <script type="text/javascript" src="{{ url_for('static', filename='lib/materialize_1.0.0/materialize.min.js') }}"></script>
+    <!-- <script src="lib/cytoscape_3.19.0/cytoscape.min.js"></script> -->
+    <script src="{{ url_for('static', filename='lib/cytoscape_3.19.0/cytoscape.umd.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
+</body>
+
+</html>

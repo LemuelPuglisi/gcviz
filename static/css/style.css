@@ -1,0 +1,133 @@
+/* 
+    Palette 
+    - green: #00C8C7 (elements)
+    - black: #18181b (background)
+    - grey:  #27272a (cards)
+    - white: #ffffff (text)
+    - pink:  #FF5F96 (elements)
+*/
+
+html, body {
+    margin: 0;
+    background-color: #18181b;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* padding: 20px; */
+}
+
+#graph-display {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #18181b;
+}
+
+#legend {
+    background-color: #27272a;
+    position: absolute;
+    border: 0;
+    border-radius: 10px; 
+    top:    20px; 
+    right:  20px; 
+    color: #fff; 
+    text-align: left;
+    padding: 10px; 
+}
+
+.colorblock {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Materialize custom changes */
+
+.btn-floating-color {
+    background-color: #00C8C7;
+}
+
+.tap-target-color {
+    background-color: #27272a;
+    color: #ffffff;
+}
+
+.sidenav-color {
+    background-color: #27272a;
+    color: #fff;
+}
+
+.sidenav-brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.sidenav-brand-container img {
+    width: 100%;
+}
+
+.sidenav-container {
+    padding: 3px 30px;
+}
+
+.sidenav-container select {
+    color: #fff;
+}
+
+.sidenav-container select {
+    color: #fff;
+}
+
+.input-field input {
+    color: white;
+    border-bottom: 1px solid #00C8C7;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+#communities-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.community-legend {
+    height: 25px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 200, 199, 1) 0%, rgba(255, 95, 150, 1) 100%);
+    ;
+    margin: 10px 0 20px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.community-item {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 100%;
+    /* background-color: #00C8C7; */
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.active-community-item {
+    background-color: white !important;
+    font-weight: thin;
+    color: black;
+}
+
