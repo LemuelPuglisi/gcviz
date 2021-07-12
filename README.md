@@ -13,7 +13,7 @@ This project apply relevant community detection algorithms to a network of genes
 | Clauset-Newman-Moore   | Modularity maximization                        | 0.61       | networkx       |
 | Node2Vec               | Graph nodes embeddings clustered with kmeans.  | 0.65       | Node2Vec       |
 | Kernigan-Lin bisection | Minimize the cut (applyed recursively)         | 0.06       | networkx       |
-| Spectral clustering    | Based on specter of the graph laplacian matrix | 0.11       | scikit-learn   |
+| Spectral clustering    | Based on specter of the graph laplacian matrix | 0.66       | scikit-learn   |
 | Girvan-Newman          | Edge betweenness based                         | 0.04       | networkx       |
 
 
