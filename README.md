@@ -1,10 +1,10 @@
+[app_preview.webm](https://github.com/LemuelPuglisi/gcviz/assets/42694683/82d511c5-636a-4186-8542-12baf0581fec)
+
 <h1 align="center">Welcome to gcviz 🧬</h1>
 <p>
 </p>
 
 This project apply relevant community detection algorithms to a network of genes interactions. A Flask web application let you visualize the result of the partitioning for each algorithm applied. You can explore and merge communities, as well as analyze their underling genes. Currently supported algorithms: 
-
-
 
 | Name                   | Description                                    | modularity | library        |
 | ---------------------- | ---------------------------------------------- | ---------- | -------------- |
@@ -15,8 +15,6 @@ This project apply relevant community detection algorithms to a network of genes
 | Kernigan-Lin bisection | Minimize the cut (applyed recursively)         | 0.06       | networkx       |
 | Spectral clustering    | Based on specter of the graph laplacian matrix | 0.66       | scikit-learn   |
 | Girvan-Newman          | Edge betweenness based                         | 0.04       | networkx       |
-
-
 
 ## 🐋 Docker 
 
